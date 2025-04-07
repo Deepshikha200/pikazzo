@@ -8,18 +8,9 @@ import {
 } from "../../assets/images/Icons/SvgIcons";
 import locationicon from "../../assets/images/locationIcon_dark.png";
 import { Link } from "react-router-dom";
-import GoogleMapReact from "google-map-react";
 import "./Footer.scss";
 
 const Footer = () => {
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627,
-    },
-    zoom: 11,
-  };
-
   return (
     <footer className="footer">
       <Container>
