@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import CommonButton from "../CommonButton/CommonButton";
 import logo from "../../assets/images/PIKAZZO-logo.png";
 import ContactUsModal from "../Modal/ContactUsModal";
@@ -11,11 +11,34 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-  const handleNavLinkClick = () => {
+
+  // const handleNavLinkClick = () => {};
+
+  const handleNavLinkClick = (path, offset = -100) => {
     setNavbarExpanded(false);
     onNavbarToggle(false);
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        scrollToSection(path, offset);
+      }, 100);
+    } else {
+      scrollToSection(path, offset);
+    }
   };
 
+  const scrollToSection = (path, offset) => {
+    const element = document.getElementById(path);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop + offset,
+        behavior: "smooth",
+      });
+    }
+  };
+  const location = useLocation();
+  const pathname = location.pathname;
   const certificateCourses = [
     {
       path: "/graphic-designing-institute-in-chandigarh",
@@ -212,20 +235,42 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
                   </ul>
                 </div>
               </li>
-              <Nav.Link
-                href="#about-us"
-                className="nav-link"
-                onClick={handleNavLinkClick}
-              >
-                About Us
-              </Nav.Link>
-              <Nav.Link
-                href="#placements"
-                className="nav-link"
-                onClick={handleNavLinkClick}
-              >
-                Placements
-              </Nav.Link>
+              {pathname === "/" ? (
+                <>
+                  <Nav.Link
+                    href="#about-us"
+                    className="nav-link"
+                    onClick={() => handleNavLinkClick("about-us")}
+                  >
+                    About Us
+                  </Nav.Link>
+                  <Nav.Link
+                    href="#placements"
+                    className="nav-link"
+                    onClick={() => handleNavLinkClick("placements")}
+                  >
+                    Placements
+                  </Nav.Link>
+                </>
+              ) : (
+                <>
+                  <NavLink
+                    to="/#about-us"
+                    className="nav-link"
+                    onClick={() => handleNavLinkClick("about-us")}
+                  >
+                    About Us
+                  </NavLink>
+                  <NavLink
+                    to="/#placements"
+                    className="nav-link"
+                    onClick={() => handleNavLinkClick("placements")}
+                  >
+                    Placements
+                  </NavLink>
+                </>
+              )}
+
               <NavLink
                 to="/certificate-verification"
                 className="nav-link"
