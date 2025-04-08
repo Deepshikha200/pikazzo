@@ -107,8 +107,7 @@
 
 .degree_banner_row-two {
   position: relative;
-  color: $white;
-  background-color: $navyblue;
+  // background-color: $navyblue;
   z-index: 9;
 
   // &::after {
@@ -202,13 +201,11 @@
     flex-direction: column;
     padding-bottom: 1rem;
 
-    & h2,
-    & span {
-      color: $white;
-    }
 
     & h2,
     & p {
+      color: $black ;
+
       @media (max-width:575px) {
         font-size: 3rem;
       }

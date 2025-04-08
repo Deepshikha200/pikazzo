@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import light_logo from "../../../../assets/images/light_logo.png";
 import happy_student from "../../../../assets/images/happy_student.png";
 // import update from "../../../../assets/images/updateimg.png";
+import dark_logo from "../../../../assets/images/dark_logo.png";
 
 import { ButtonArrow } from "../../../../assets/images/Icons/SvgIcons";
 import "./DegreeBanner.scss";
@@ -18,7 +19,7 @@ const BannerTwo = () => {
             <div className=" degree_banner_col">
               <div className="dark_text">
                 <div className="img_con">
-                  <img src={light_logo} alt="" />
+                  <img src={dark_logo} alt="" />
                 </div>
                 <h2 className="mb-0 ">
                   <h2 className="mb-0 ">
@@ -44,7 +45,7 @@ const BannerTwo = () => {
             </div>
             <div>
               <img src={happy_student} alt="" />
-            </div>  
+            </div>
           </div>
         </Container>
       </section>
