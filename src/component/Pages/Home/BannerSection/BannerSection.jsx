@@ -3,6 +3,9 @@ import img1 from "../../../../assets/images/banner.jpg";
 import img2 from "../../../../assets/images/bannerf1.jpg";
 import img4 from "../../../../assets/images/banner1.jpeg";
 import img3 from "../../../../assets/images/banner_update.jpg";
+import img5 from "../../../../assets/images/banner_in1.jpeg";
+import img6 from "../../../../assets/images/banner_in2.jpeg";
+
 import Slider from "react-slick";
 import "./BannerSection.scss";
 import { motion } from "framer-motion";
@@ -13,10 +16,16 @@ const BannerSection = () => {
       image: img1,
     },
     {
+      image: img5,
+    },
+    {
       image: img3,
     },
     {
       image: img4,
+    },
+    {
+      image: img6,
     },
     {
       image: img2,
