@@ -148,42 +148,7 @@ export const PlacementImg = [
 
 
 
-export const AllImages = [
-  Graphics4,
-  Graphics7,
-  Graphics1,
-  VectorImg7,
-  VectorImg8,
-  DigitalArt2,
-  DigitalArt3,
-  Graphics5,
-  Graphics8,
-  DigitalArt16,
-  DigitalArt17,
-  DigitalArt18,
-  DigitalArt4,
-  DigitalArt5,
-  DigitalArt7,
-  DigitalArt8,
-  DigitalArt9,
-  DigitalArt10,
-  DigitalArt11,
-  VectorImg9,
-  VectorImg10,
-  VectorImg1,
-  VectorImg2,
-  VectorImg3,
-  VectorImg4,
-  VectorImg5,
-  VectorImg6,
-  DigitalArt12,
-  DigitalArt13,
-  DigitalArt14,
-  DigitalArt15,
 
-  DigitalArt20,
-  DigitalArt21,
-]
 
 import test1 from "../images/Testimonials_phone/test1.png";
 import test2 from "../images/Testimonials_phone/test2.png";
@@ -288,3 +253,100 @@ import v5 from "../images/eventsimg/virtual/v5.jpg";
 import v6 from "../images/eventsimg/virtual/v6.jpg";
 
 export const VirtualImages = [v1, v2, v3, v4, v5, v6];
+
+
+import stu1 from "../images/eventsimg/Studentsupdate/student1.png";
+import stu2 from "../images/eventsimg/Studentsupdate/student2.png";
+import stu3 from "../images/eventsimg/Studentsupdate/student3.png";
+import stu4 from "../images/eventsimg/Studentsupdate/student4.png";
+import stu5 from "../images/eventsimg/Studentsupdate/student5.png";
+import stu6 from "../images/eventsimg/Studentsupdate/student6.png";
+import stu7 from "../images/eventsimg/Studentsupdate/student7.png";
+import stu8 from "../images/eventsimg/Studentsupdate/student8.png";
+import stu9 from "../images/eventsimg/Studentsupdate/student9.png";
+import stu10 from "../images/eventsimg/Studentsupdate/student10.png";
+import stu11 from "../images/eventsimg/Studentsupdate/student11.png";
+import stu12 from "../images/eventsimg/Studentsupdate/student12.png";
+import stu13 from "../images/eventsimg/Studentsupdate/student13.png";
+import stu14 from "../images/eventsimg/Studentsupdate/student14.png";
+import stu15 from "../images/eventsimg/Studentsupdate/student15.png";
+import stu16 from "../images/eventsimg/Studentsupdate/student16.png";
+import stu17 from "../images/eventsimg/Studentsupdate/student17.png";
+import stu18 from "../images/eventsimg/Studentsupdate/student18.png";
+
+
+export const StudentUpdate = [
+  stu1,
+  stu2,
+  stu3,
+  stu4,
+  stu5,
+  stu6,
+  stu7,
+  stu8,
+  stu9,
+  stu10,
+  stu11,
+  stu12,
+  stu13,
+  stu14,
+  stu15,
+  stu16,
+  stu17,
+  stu18,]
+
+
+export const AllImages = [
+  stu1,
+  Graphics4,
+  stu2,
+  Graphics7,
+  Graphics1,
+  stu16,
+  VectorImg7,
+  VectorImg8,
+  stu4,
+  DigitalArt2,
+  stu15,
+  stu5,
+  DigitalArt3,
+  Graphics5,
+  stu3,
+  Graphics8,
+  DigitalArt16,
+  DigitalArt17,
+  stu12,
+  DigitalArt18,
+  stu7,
+  DigitalArt4,
+  stu13,
+  DigitalArt5,
+  stu17,
+  DigitalArt7,
+  DigitalArt8,
+  stu9,
+  DigitalArt9,
+  DigitalArt10,
+  stu14,
+  DigitalArt11,
+  VectorImg9,
+  VectorImg10,
+  stu10,
+  VectorImg1,
+  VectorImg2,
+  stu11,
+  VectorImg3,
+  stu8,
+  VectorImg4,
+  VectorImg5,
+  VectorImg6,
+  stu18,
+  DigitalArt12,
+  stu6,
+  DigitalArt13,
+  DigitalArt14,
+  DigitalArt15,
+  DigitalArt20,
+  DigitalArt21,
+]
+

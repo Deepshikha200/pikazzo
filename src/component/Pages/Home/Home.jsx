@@ -21,7 +21,7 @@ const Home = () => {
       <BannerSection />
       <FormPage />
       <Awards />
-      <AdmissionOpen />
+      {/* <AdmissionOpen /> */}
       <BannerTwo />
       {/* <Projects /> */}
       {/* <DegreeBanner /> */}

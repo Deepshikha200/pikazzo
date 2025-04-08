@@ -1,6 +1,14 @@
 @use "../../../assets//theme/var" as *;
 
 .events {
+  padding-top: 3rem;
+  font-family: $globalFont;
+
+  @media (max-width:1679px) {
+    padding: 0;
+    margin-top: -1rem;
+  }
+
   .events_content_banner {
     width: 100%;
   }
@@ -23,7 +31,7 @@
   }
 
   &_img {
-    max-width: 48rem;
+    max-width: 43rem;
     border-radius: 2rem;
     transition: all 0.4s ease;
 
@@ -66,9 +74,10 @@
     }
 
     & h2 {
-      margin-block: 4rem;
-      font-family: ' Courier, monospace';
-      font-size: 5.5rem;
+      margin-top: 3.8rem;
+      font-family: $globalFont;
+      font-size: 9rem;
+      margin-bottom: 1.8rem;
 
       @media (max-width:1679px) {
         margin-block: 2rem;
@@ -88,7 +97,7 @@
 
     & p {
       font-weight: 600;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       line-height: 3rem;
       word-break: break-word;
 
@@ -97,6 +106,5 @@
         line-height: 2.6rem;
       }
     }
-
   }
 }

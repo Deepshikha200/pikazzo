@@ -7,6 +7,7 @@ import {
   ArtImages,
   VectorArt,
   Graphics,
+  StudentUpdate,
 } from "../../../assets/Student_Work/ArtImages";
 import Header from "../../../common/Header/Header";
 import student_img from "../../../assets/images/student_work.png";
@@ -38,10 +39,11 @@ const StudentWork = () => {
   ];
 
   const categories = {
-    All: [...ArtImages, ...VectorArt, ...Graphics],
+    All: [...ArtImages, ...VectorArt, ...Graphics, ...StudentUpdate],
     "Vector Art": VectorArt,
     "Digital Art": ArtImages,
     "Graphic Designing": Graphics,
+    "3D": StudentUpdate,
     "Motion Graphics": motionGraphicsLinks,
     "Video Editing": videoEditingLinks,
   };
