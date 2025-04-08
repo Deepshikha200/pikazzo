@@ -1,7 +1,9 @@
 @use "../../../assets//theme/var" as *;
 
 .events {
-  padding-top: 7rem;
+  .events_content_banner {
+    width: 100%;
+  }
 
   @media (max-width:1199px) {
     padding-top: 4rem;
@@ -47,6 +49,7 @@
 
   &_content {
     padding: 5rem 0;
+    text-align: center;
 
 
     @media (max-width:1679px) {
@@ -56,9 +59,6 @@
   }
 
   &_con {
-    max-width: 70rem;
-    text-align: center;
-    margin: 0 auto;
 
     @media (max-width:767px) {
       max-width: 100%;

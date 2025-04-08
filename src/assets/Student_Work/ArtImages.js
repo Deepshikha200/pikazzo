@@ -218,7 +218,7 @@ export const TestimonialsPhone = [
   test12,
   test13,
 ]
-
+// AMD
 import amd1 from "../images/eventsimg/AMD/Amd1.jpg";
 import amd2 from "../images/eventsimg/AMD/Amd2.jpg";
 import amd3 from "../images/eventsimg/AMD/Amd3.jpg";
@@ -231,7 +231,7 @@ import amd9 from "../images/eventsimg/AMD/Amd9.jpg";
 
 export const AmdImages = [amd1, amd2, amd3, amd4, amd5, amd6, amd7, amd8, amd9];
 
-
+// Comic
 import comic1 from "../images/eventsimg/Comic/Comic1.jpg";
 import comic2 from "../images/eventsimg/Comic/Comic2.jpg";
 import comic3 from "../images/eventsimg/Comic/Comic3.jpg";
@@ -244,7 +244,7 @@ import comic9 from "../images/eventsimg/Comic/Comic9.jpg";
 
 export const ComicImages = [comic1, comic2, comic3, comic4, comic5, comic6, comic7, comic8, comic9];
 
-
+// Motion
 import motion1 from "../images/eventsimg/Motion/Motion1.jpg";
 import motion2 from "../images/eventsimg/Motion/Motion2.jpg";
 import motion3 from "../images/eventsimg/Motion/Motion3.jpg";
@@ -252,9 +252,10 @@ import motion4 from "../images/eventsimg/Motion/Motion4.jpg";
 import motion5 from "../images/eventsimg/Motion/Motion5.jpg";
 import motion6 from "../images/eventsimg/Motion/Motion6.jpg";
 
-
 export const MotionImages = [motion1, motion2, motion3, motion4, motion5, motion6];
 
+
+// Ramoji
 import Ramoji1 from "../images/eventsimg/Ramoji/Ramoji1.jpg";
 import Ramoji2 from "../images/eventsimg/Ramoji/Ramoji2.jpg";
 import Ramoji3 from "../images/eventsimg/Ramoji/Ramoji3.jpg";
@@ -265,6 +266,8 @@ import Ramoji6 from "../images/eventsimg/Ramoji/Ramoji6.jpg";
 export const RamojiImages = [Ramoji1, Ramoji2, Ramoji3, Ramoji4, Ramoji5, Ramoji6];
 
 
+
+// Unreal
 import Unreal1 from "../images/eventsimg/Unreal/Unreal1.jpg";
 import Unreal2 from "../images/eventsimg/Unreal/Unreal2.jpg";
 import Unreal3 from "../images/eventsimg/Unreal/Unreal3.jpg";
@@ -276,3 +279,12 @@ import Unreal8 from "../images/eventsimg/Unreal/Unreal8.jpg";
 import Unreal9 from "../images/eventsimg/Unreal/Unreal9.jpg";
 
 export const UnrealImages = [Unreal1, Unreal2, Unreal3, Unreal4, Unreal5, Unreal6, Unreal7, Unreal8, Unreal9];
+
+import v1 from "../images/eventsimg/virtual/v1.jpg";
+import v2 from "../images/eventsimg/virtual/v2.jpg";
+import v3 from "../images/eventsimg/virtual/v3.jpg";
+import v4 from "../images/eventsimg/virtual/v4.jpg";
+import v5 from "../images/eventsimg/virtual/v5.jpg";
+import v6 from "../images/eventsimg/virtual/v6.jpg";
+
+export const VirtualImages = [v1, v2, v3, v4, v5, v6];

@@ -18,8 +18,8 @@ import FaqsSection from "./FaqsSection/FaqsSection";
 const Home = () => {
   return (
     <>
-      <BannerSection />
-      <FormPage />
+      {/* <BannerSection />
+      <FormPage /> */}
       <Awards />
       <AdmissionOpen />
       <BannerTwo />
