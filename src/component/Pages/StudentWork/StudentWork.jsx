@@ -39,11 +39,11 @@ const StudentWork = () => {
   ];
 
   const categories = {
-    All: [...ArtImages, ...VectorArt, ...Graphics, ...StudentUpdate],
+    All: [...StudentUpdate, ...ArtImages, ...VectorArt, ...Graphics],
+    "3D": StudentUpdate,
     "Vector Art": VectorArt,
     "Digital Art": ArtImages,
     "Graphic Designing": Graphics,
-    "3D": StudentUpdate,
     "Motion Graphics": motionGraphicsLinks,
     "Video Editing": videoEditingLinks,
   };
