@@ -53,8 +53,6 @@ const StudentWork = () => {
     setAnimationKey((prev) => prev + 1);
   };
 
-  const images = {};
-
   const containerVariants = {
     hidden: { opacity: 1 },
     show: {
