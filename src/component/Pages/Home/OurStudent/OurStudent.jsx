@@ -2,12 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { Container } from "react-bootstrap";
 import CommonHeading from "../../../../common/CommonHeading/CommonHeading";
-import {
-  ArtImages,
-  VectorArt,
-  GraphicsNew,
-  AllImages,
-} from "../../../../assets/Student_Work/ArtImages";
+import { AllImages } from "../../../../assets/Student_Work/ArtImages";
 import "./OurStudent.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -46,7 +41,6 @@ const OurStudent = () => {
   };
 
   const navigate = useNavigate();
-  const allImages = [...ArtImages, ...VectorArt, ...GraphicsNew];
 
   const motionGraphicsLinks = [
     "https://www.youtube.com/embed/4WLDBVRUsUE",
