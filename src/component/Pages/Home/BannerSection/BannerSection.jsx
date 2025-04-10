@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import img1 from "../../../../assets/images/banner.jpg";
 import img2 from "../../../../assets/images/bannerf1.jpg";
-import img4 from "../../../../assets/images/banner1.jpeg";
+// import img4 from "../../../../assets/images/banner1.jpeg";
 import img3 from "../../../../assets/images/banner_update.jpg";
 import img5 from "../../../../assets/images/banner_in1.jpeg";
 import img6 from "../../../../assets/images/banner_in2.jpeg";
@@ -21,9 +21,9 @@ const BannerSection = () => {
     {
       image: img3,
     },
-    {
-      image: img4,
-    },
+    // {
+    //   image: img4,
+    // },
     {
       image: img6,
     },

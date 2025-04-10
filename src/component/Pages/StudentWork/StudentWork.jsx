@@ -41,8 +41,8 @@ const StudentWork = () => {
   const categories = {
     All: [...StudentUpdate, ...ArtImages, ...VectorArt, ...Graphics],
     "3D": StudentUpdate,
-    "Vector Art": VectorArt,
     "Digital Art": ArtImages,
+    "Vector Art": VectorArt,
     "Graphic Designing": Graphics,
     "Motion Graphics": motionGraphicsLinks,
     "Video Editing": videoEditingLinks,
