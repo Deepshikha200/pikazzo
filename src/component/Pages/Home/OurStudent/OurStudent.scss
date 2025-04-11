@@ -9,6 +9,11 @@
     padding-top: 5rem;
   }
 
+  .youtube_slider {
+    margin-top: 6rem;
+    padding: 0 4rem;
+  }
+
   .slider-item {
     position: relative;
     padding: 0 1rem;
@@ -83,24 +88,30 @@
 
   }
 
-  .slick-arrow.slick-prev,
-  .slick-arrow.slick-next {
-    top: 23rem;
-    left: 50%;
-
-
-  }
+  // .slick-arrow.slick-prev,
+  // .slick-arrow.slick-next {
+  //   top: 23rem;
+  //   left: 50%;
+  // }
 
   .slick-arrow.slick-prev {
-    left: 46%;
+    left: -3rem;
+    top: 36%;
 
-    @media (max-width:991px) {
-      left: 42%;
-    }
 
-    @media (max-width:575px) {
-      left: 38%;
-    }
+    // @media (max-width:991px) {
+    //   left: 42%;
+    // }
+
+    // @media (max-width:575px) {
+    //   left: 38%;
+    // }
+  }
+
+  .slick-arrow.slick-next {
+    right: -2rem;
+    top: 36%;
+
   }
 
   .slick-next:before {
@@ -115,8 +126,7 @@
 
 .insta_con {
   overflow: hidden;
-  width: 100%;
-
+  width: 100vw;
 }
 
 .instagram_flex {
@@ -128,12 +138,14 @@
 .instagram_scroll {
   display: flex;
   animation: scroll 25s linear infinite;
+  min-width: 200%; // Ensures enough content for animation
 }
 
 .instagram_scroll img {
-  width: 50rem;
-  height: 50rem;
-  margin-right: 1rem;
+  width: 52rem;
+  height: 51.2rem;
+  object-fit: cover;
+  margin-right: 2rem;
   border-radius: 2rem;
   cursor: pointer;
 

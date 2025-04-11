@@ -65,19 +65,30 @@ const OurStudent = () => {
       <section className="insta_con">
         <div className="instagram_flex">
           <div className="instagram_scroll">
-            {AllImages.concat(AllImages).map((src, index) => (
+            {/* {AllImages.map((src, index) => (
               <img
                 key={index}
                 src={src}
                 alt=""
                 onClick={() => navigate("/students-work")}
               />
-            ))}
+            ))} */}
+            {Array(10)
+              .fill(AllImages)
+              .flat()
+              .map((src, index) => (
+                <img
+                  key={index}
+                  src={src}
+                  alt=""
+                  onClick={() => navigate("/students-work")}
+                />
+              ))}
           </div>
         </div>
       </section>
       <>
-        <div className="mt-5 py-5">
+        <div className=" youtube_slider">
           <Slider {...settings}>
             {motionGraphicsLinks.map((image, index) => (
               <div key={index} className="slider-item">

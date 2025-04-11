@@ -7,6 +7,7 @@ import { Form } from "react-bootstrap";
 import CustomSelect from "./../UI/Select/CustomSelect";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import "./ContactUsModal.scss";
 
 const ContactUsModal = ({ show, handleClose }) => {
@@ -21,11 +22,20 @@ const ContactUsModal = ({ show, handleClose }) => {
     { value: "ai", label: "AI Content Creation" },
   ];
 
+  const timeSlots = [
+    { value: "11:00am - 12:00pm", label: "11:00am - 12:00pm" },
+    { value: "12:00pm - 1:00pm", label: "12:00pm - 1:00pm" },
+    { value: "1:00pm - 2:00pm", label: "1:00pm - 2:00pm" },
+    { value: "4:00pm - 5:00pm", label: "4:00pm - 5:00pm" },
+    { value: "5:00pm - 6:00pm", label: "5:00pm - 6:00pm" },
+  ];
   const initial = {
     name: "",
     email: "",
     phone: "",
     course: "",
+    timeSlot: "",
+    captchaToken: "",
   };
 
   const validate = (values) => {
@@ -44,6 +54,13 @@ const ContactUsModal = ({ show, handleClose }) => {
     if (!values.course) {
       errors.course = "Please select a course";
     }
+    if (!values.timeSlot) {
+      errors.timeSlot = "Please select a time slot";
+    }
+    if (!values.captchaToken) {
+      errors.captchaToken = "Please verify the reCAPTCHA";
+    }
+
     return errors;
   };
 
@@ -59,11 +76,15 @@ const ContactUsModal = ({ show, handleClose }) => {
     validate,
     onSubmit: async (values, { resetForm }) => {
       const formData = new FormData();
-      formData.append("access_key", "a6baaa41-ff5b-45a6-8e46-ffff5b66245e"); // Replace with your Web3Forms access key
+      formData.append("access_key", "a6baaa41-ff5b-45a6-8e46-ffff5b66245e");
+      // formData.append("access_key", "bb345f89-5331-4375-8bd4-2b09315e4945");
+
       formData.append("name", values.name);
       formData.append("email", values.email);
       formData.append("phone", values.phone);
       formData.append("course", values.course);
+      formData.append("timeSlot", values.timeSlot); // 🆕 Append time slot
+      formData.append("g-recaptcha-response", values.captchaToken);
 
       try {
         const response = await fetch("https://api.web3forms.com/submit", {
@@ -74,13 +95,12 @@ const ContactUsModal = ({ show, handleClose }) => {
         if (result.success) {
           toast.success("Form submitted successfully!");
           resetForm();
-          handleClose(); // Close modal after successful submission
+          handleClose();
         } else {
-          // toast.error("Form submission failed! Try again.");
+          toast.error("Form submission failed! Try again.");
         }
       } catch (error) {
         toast.error("Error submitting form. Please try again.");
-        // console.error("Error submitting form:", error);
       }
     },
   });
@@ -103,6 +123,7 @@ const ContactUsModal = ({ show, handleClose }) => {
               name="name"
             />
             {errors.name && <p className="error">{errors.name}</p>}
+
             <CustomInput
               label="Email"
               type="email"
@@ -111,6 +132,7 @@ const ContactUsModal = ({ show, handleClose }) => {
               name="email"
             />
             {errors.email && <p className="error">{errors.email}</p>}
+
             <CustomInput
               label="Phone"
               type="number"
@@ -134,15 +156,30 @@ const ContactUsModal = ({ show, handleClose }) => {
                   setFieldValue("course", selectedOption.value)
                 }
               />
+              {errors.course && <p className="error">{errors.course}</p>}
             </div>
-            {errors.course && <p className="error">{errors.course}</p>}
+
+            <div>
+              <label htmlFor="timeSlot" className="form-label mt-4">
+                Select Time Slot
+              </label>
+              <CustomSelect
+                options={timeSlots}
+                name="timeSlot"
+                value={
+                  timeSlots.find((slot) => slot.value === values.timeSlot) || ""
+                }
+                onChange={(selectedOption) =>
+                  setFieldValue("timeSlot", selectedOption.value)
+                }
+              />
+              {errors.timeSlot && <p className="error">{errors.timeSlot}</p>}
+            </div>
 
             <CommonButton text="Submit" type="submit" className="mt-5 w-100" />
           </Form>
         </div>
       </CommonModal>
-      {/* Add ToastContainer once in your app */}
-      {/* <ToastContainer position="top-right" autoClose={3000} /> */}
     </>
   );
 };

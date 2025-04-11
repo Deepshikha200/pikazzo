@@ -3,6 +3,8 @@
 .form {
   padding-top: 7rem;
   margin-bottom: 6rem;
+  position: relative;
+  z-index: 88;
 
   @media (max-width:1679px) {
     padding-top: 9rem;

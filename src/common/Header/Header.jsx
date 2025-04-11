@@ -293,6 +293,14 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
               >
                 Students Work
               </NavLink>
+
+              <a
+                href="
+              https://pikazoinstitute.com/blog"
+                className="nav-link"
+              >
+                Blogs
+              </a>
             </Nav>
           </Navbar.Collapse>
 

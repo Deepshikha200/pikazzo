@@ -60,14 +60,30 @@ import Graphics13 from "./Graphics/img3.png";
 import Graphics14 from "./Graphics/img4.png";
 import Graphics15 from "./Graphics/img5.png";
 import Graphics16 from "./Graphics/img6.png";
+import stuu1 from "../images/eventsimg/Studentsupdate/stu1.jpg";
+import stuu2 from "../images/eventsimg/Studentsupdate/stu2.jpg";
+import stuu3 from "../images/eventsimg/Studentsupdate/stu3.jpg";
+import stuu4 from "../images/eventsimg/Studentsupdate/stu4.png";
+import stuu5 from "../images/eventsimg/Studentsupdate/stu5.jpg";
+import stuu6 from "../images/eventsimg/Studentsupdate/stu6.jpg";
+import stuu7 from "../images/eventsimg/Studentsupdate/stu7.jpg";
 
 export const Graphics = [
+  stuu1,
+  stuu2,
+
+  stuu3,
+  stuu4,
+  stuu5,
+  stuu6,
+  Graphics16,
+
   Graphics13,
   Graphics14,
   Graphics10,
   Graphics9,
   Graphics15,
-  Graphics16,
+  stuu7,
   Graphics3,
   Graphics6,
   Graphics4,
@@ -76,6 +92,7 @@ export const Graphics = [
   Graphics7,
   Graphics1,
   Graphics2,
+
 ];
 export const GraphicsNew = [
   Graphics3,
@@ -274,14 +291,20 @@ export const StudentUpdate = [
 
 
 export const AllImages = [
+  stuu1,
+  stuu2,
+  stuu3,
+  stuu4,
+  stuu5,
+  stuu6,
+  stuu7,
   stu1,
   Graphics4,
   stu2,
-  // stu16,
-  Graphics7,
   stu15,
-  Graphics1,
+  // Graphics1,
   stu3,
+  // Graphics7,
   VectorImg7,
   stu4,
   VectorImg8,

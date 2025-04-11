@@ -5,25 +5,53 @@
 
   & h1 {
     text-align: center;
-    font-size: 4rem;
-    font-weight: 600;
-    margin: 1rem 0;
-    line-height: normal;
-    white-space: nowrap;
 
-    @media (max-width:1679px) {
-      font-size: 3.6rem;
+    span {
+      display: inline-block;
+      position: relative;
+      font-size: 4rem;
+      font-weight: 600;
+      margin: 1rem 0;
+      line-height: normal;
+      white-space: nowrap;
+      padding-bottom: 1rem;
+
+      @media (max-width:1679px) {
+        font-size: 3.6rem;
+      }
+
+      @media (max-width:991px) {
+        font-size: 3rem;
+      }
+
+      @media (max-width:575px) {
+        font-size: 2rem;
+        white-space: wrap;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        transition: width 0.5s ease-in-out;
+        background-color: $primary;
+      }
+
+      &:hover::before {
+        width: 100%;
+        transition: width 0.5s ease-in-out;
+
+        @media (max-width: 1199px) {
+          width: 0;
+        }
+      }
     }
 
-    @media (max-width:991px) {
-      font-size: 3rem;
-    }
 
-    @media (max-width:575px) {
-      font-size: 2rem;
-      white-space: wrap;
 
-    }
   }
 
   @media (max-width:1679px) {

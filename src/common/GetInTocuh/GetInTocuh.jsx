@@ -11,7 +11,7 @@ import "./GetInTocuh.scss";
 const GetInTocuh = () => {
   const [result, setResult] = useState("");
 
-  const options = [
+  const courseOptions = [
     { value: "animation", label: "Animation" },
     { value: "vfx", label: "VFX" },
     { value: "webgraphics", label: "Web & Graphics" },
@@ -20,6 +20,13 @@ const GetInTocuh = () => {
     { value: "videoediting", label: "Video Editing" },
     { value: "digitalmarketting", label: "Digital Marketing" },
     { value: "ai", label: "AI Content Creation" },
+  ];
+  const timeSlotOptions = [
+    { value: "11:00am - 12:00pm", label: "11:00am - 12:00pm" },
+    { value: "12:00pm - 1:00pm", label: "12:00pm - 1:00pm" },
+    { value: "1:00pm - 2:00pm", label: "1:00pm - 2:00pm" },
+    { value: "4:00pm - 5:00pm", label: "4:00pm - 5:00pm" },
+    { value: "5:00pm - 6:00pm", label: "5:00pm - 6:00pm" },
   ];
 
   const validate = (values) => {
@@ -38,21 +45,26 @@ const GetInTocuh = () => {
     if (!values.course) {
       errors.course = "Please select a course";
     }
+    if (!values.timeslot) {
+      errors.timeslot = "Please select a time slot";
+    }
     return errors;
   };
 
   const formik = useFormik({
-    initialValues: { name: "", email: "", phone: "", course: "" },
+    initialValues: { name: "", email: "", phone: "", course: "", timeslot: "" },
     validate,
     onSubmit: async (values, { resetForm }) => {
       setResult("Sending....");
       const formData = new FormData();
       formData.append("access_key", "a6baaa41-ff5b-45a6-8e46-ffff5b66245e");
+      // formData.append("access_key", "bb345f89-5331-4375-8bd4-2b09315e4945");
 
       formData.append("name", values.name);
       formData.append("email", values.email);
       formData.append("phone", values.phone);
       formData.append("course", values.course);
+      formData.append("timeslot", values.timeslot);
 
       try {
         const response = await fetch("https://api.web3forms.com/submit", {
@@ -108,28 +120,39 @@ const GetInTocuh = () => {
 
         <div>
           <label className="form-label mt-4">Select Course</label>
-          {/* <CustomSelect
-            options={options}
-            name="course"
-            value={formik.values.course}
-            onChange={(selectedOption) =>
-              formik.setFieldValue("course", selectedOption.value)
-            } // Fix: Ensure selection updates state
-          /> */}
           <CustomSelect
-            options={options}
+            options={courseOptions}
             name="course"
             value={
-              options.find((option) => option.value === formik.values.course) ||
-              ""
+              courseOptions.find(
+                (option) => option.value === formik.values.course
+              ) || ""
             }
             onChange={(selectedOption) => {
               formik.setFieldValue("course", selectedOption.value);
             }}
           />
-
           {formik.errors.course && (
             <p className="error">{formik.errors.course}</p>
+          )}
+        </div>
+
+        <div>
+          <label className="form-label mt-4">Select Time Slot</label>
+          <CustomSelect
+            options={timeSlotOptions}
+            name="timeslot"
+            value={
+              timeSlotOptions.find(
+                (option) => option.value === formik.values.timeslot
+              ) || ""
+            }
+            onChange={(selectedOption) => {
+              formik.setFieldValue("timeslot", selectedOption.value);
+            }}
+          />
+          {formik.errors.timeslot && (
+            <p className="error">{formik.errors.timeslot}</p>
           )}
         </div>
 

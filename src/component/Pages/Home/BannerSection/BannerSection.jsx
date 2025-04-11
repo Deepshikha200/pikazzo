@@ -99,7 +99,9 @@ const BannerSection = () => {
           </div>
         ))}
       </Slider>
-      <h1>Top Animation Institute in Chandigarh</h1>
+      <h1>
+        <span>Top Animation Institute in Chandigarh </span>
+      </h1>
     </section>
   );
 };
